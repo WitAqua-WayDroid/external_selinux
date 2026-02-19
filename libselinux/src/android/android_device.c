@@ -458,7 +458,9 @@ static int selinux_android_restorecon_common(const char* pathname_orig,
 	}
 
 	if (is_selinux_enabled() <= 0) {
+#if 0
 		selinux_log(SELINUX_WARNING, "SELinux: SELinux is disabled, skipping restorecon");
+#endif
 		return 0;
 	}
 
